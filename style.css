@@ -7,15 +7,17 @@ body {
 
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  align-items: center;       /* centra verticalmente */
+  justify-content: center;   /* centra horizontalmente */
+  gap: 40px;
   padding: 20px 40px;
   background: white;
-  flex-wrap: wrap;
+  flex-wrap: wrap;           /* para que en pantallas chicas se pueda "romper" en 2 filas */
 }
 
 .logo img {
-  height: 60px;
+  height: 150px; 
+  display: block;
 }
 
 nav ul {
@@ -24,6 +26,8 @@ nav ul {
   gap: 20px;
   padding: 0;
   margin: 0;
+  flex-wrap: wrap;           /* para que los links bajen a siguiente línea si hace falta */
+  justify-content: center;   /* centrado cuando se rompa en responsive */
 }
 
 nav a {
@@ -34,6 +38,7 @@ nav a {
   border-radius: 20px;
   padding: 6px 12px;
   transition: 0.3s;
+  white-space: nowrap;       /* evita que las palabras del link se rompan */
 }
 
 nav a:hover {
@@ -41,6 +46,23 @@ nav a:hover {
   color: white;
 }
 
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;    /* logo arriba, menú abajo */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo img {
+    height: 80px; /* reduce tamaño logo en móvil */
+  }
+}
 .intro {
   text-align: center;
   padding: 40px 20px;
