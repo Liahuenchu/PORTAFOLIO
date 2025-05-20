@@ -32,7 +32,7 @@ nav ul {
 }
 
 nav a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
@@ -42,6 +42,7 @@ nav a {
   border-radius: 20px;
   padding: 6px 12px;
   transition: 0.3s;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -49,10 +50,9 @@ nav a:hover {
   color: white;
 }
 
-.icon {
+nav a img.icon {
   width: 16px;
   height: 16px;
-  display: inline-block;
 }
 
 /* Onda animada */
