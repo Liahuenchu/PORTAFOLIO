@@ -61,21 +61,21 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1560px; /* aumentado 30% */
   margin: auto;
 }
 
 .project {
-  background: #ccc;
-  height: 180px;
+  background: #005AEE;
+  height: 234px; /* aumentado 30% */
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  background-color: #005AEE;
   transition: 0.3s;
+  border-radius: 8px; /* redondeo suave */
 }
 
 .project:hover {
