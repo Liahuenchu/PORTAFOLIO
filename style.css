@@ -135,3 +135,50 @@ footer {
   padding: 20px;
   font-size: 0.8em;
 }
+.gallery h2,
+.about h2,
+.contact h2 {
+  text-align: center;
+  color: #005AEE;
+  font-family: 'Bariol', sans-serif;
+  margin-top: 60px;
+}
+
+.about, .contact {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: #FF5860;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* Responsive: 1 columna en móvil */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+}
