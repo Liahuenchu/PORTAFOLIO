@@ -58,25 +58,26 @@ nav a:hover {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  padding: 20px;
-  max-width: 1560px; /* aumentado 30% */
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  width: 90vw;          /* Cambiado a 90% del viewport */
+  margin: 20px auto;
+  min-height: calc(300px * 3 + 20px * 2);
 }
 
 .project {
+  height: 300px;
   background: #005AEE;
-  height: 234px; /* aumentado 30% */
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   color: white;
   text-decoration: none;
+  border-radius: 8px;
   transition: 0.3s;
-  border-radius: 8px; /* redondeo suave */
 }
+
 
 .project:hover {
   background-color: #FF5860;
