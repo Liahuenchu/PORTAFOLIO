@@ -70,7 +70,7 @@ nav a img.icon {
   width: 1440px;
   height: 100px;
   flex-shrink: 0;
-  animation: waveSlide 20s linear infinite;
+  animation: waveSlide 35s linear infinite;
 }
 
 @keyframes waveSlide {
@@ -78,7 +78,7 @@ nav a img.icon {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(1440px);
+    transform: translateX(-1440px);
   }
 }
 
