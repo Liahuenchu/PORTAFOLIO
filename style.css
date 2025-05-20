@@ -9,8 +9,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 40px;
   background: white;
+  flex-wrap: wrap;
 }
 
 .logo img {
@@ -21,6 +22,8 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
@@ -30,6 +33,12 @@ nav a {
   border: 1px solid #FF5860;
   border-radius: 20px;
   padding: 6px 12px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #FF5860;
+  color: white;
 }
 
 .intro {
@@ -49,10 +58,10 @@ nav a {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 16px;
   padding: 20px;
-  max-width: 960px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -63,6 +72,14 @@ nav a {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  color: white;
+  text-decoration: none;
+  background-color: #005AEE;
+  transition: 0.3s;
+}
+
+.project:hover {
+  background-color: #FF5860;
 }
 
 footer {
@@ -76,109 +93,4 @@ footer a {
   display: block;
   color: #FF5860;
   text-decoration: none;
-}
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr; /* 1 columna en móvil */
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .intro h1 {
-    font-size: 1.5em;
-  }
-
-  .project {
-    height: 150px;
-  }
-}
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr; /* 1 columna en móvil */
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .intro h1 {
-    font-size: 1.5em;
-  }
-
-  .project {
-    height: 150px;
-  }
-}
-main {
-  padding: 20px;
-}
-
-footer {
-  padding: 20px;
-  font-size: 0.8em;
-}
-.gallery h2,
-.about h2,
-.contact h2 {
-  text-align: center;
-  color: #005AEE;
-  font-family: 'Bariol', sans-serif;
-  margin-top: 60px;
-}
-
-.about, .contact {
-  padding: 40px 20px;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
-.contact-btn {
-  display: inline-block;
-  background: #FF5860;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 30px;
-  text-decoration: none;
-  margin-top: 20px;
-}
-
-/* Responsive: 1 columna en móvil */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 0;
-  }
-
-  .logo img {
-    height: 50px;
-  }
 }
