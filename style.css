@@ -1,8 +1,30 @@
-/* Reset y básicos */
+/* ---- Tipografías personalizadas ---- */
+@font-face {
+  font-family: 'Bariol';
+  src: url('fonts/Bariol_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bariol';
+  src: url('fonts/Bariol_Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Pro';
+  src: url('fonts/DINPro-Regular_13937.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ---- Estilos generales ---- */
 body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'DIN Pro', sans-serif;
   background-color: rgba(255, 102, 102, 0.1);
+  margin: 0;
   color: #333;
 }
 
@@ -52,6 +74,7 @@ nav a {
   white-space: nowrap;
   position: relative;
   z-index: 11;
+  font-family: 'Bariol', sans-serif;
 }
 
 nav a:hover {
@@ -103,10 +126,17 @@ nav a img.icon {
   font-family: 'Bariol', sans-serif;
   font-size: 2em;
   color: #005AEE;
+  font-weight: bold;
 }
 
 .intro .highlight {
   color: #FF5860;
+}
+
+.intro p {
+  font-family: 'Bariol', sans-serif;
+  font-weight: normal;
+  color: #005AEE;
 }
 
 /* Grilla de proyectos */
@@ -152,12 +182,13 @@ footer a {
 
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
-  /* Mantener header alto */
+  /* Mantener header alto pero con posibilidad de crecer */
   header {
     flex-direction: column;
     gap: 20px;
     padding: 10px 20px;
-    height: 200px; /* mantenemos fijo */
+    height: auto;  /* cambié de fijo a auto */
+    min-height: 200px; /* pero mínimo 200px */
   }
 
   /* Logo más pequeño para móvil */
