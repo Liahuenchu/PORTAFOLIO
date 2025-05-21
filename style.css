@@ -70,30 +70,27 @@ nav a img.icon {
   width: 1440px;
   height: 100px;
   flex-shrink: 0;
-  animation: waveSlide 34s linear infinite;
+  animation: waveSlideRight 34s linear infinite;
 }
 
-@keyframes waveSlide {
+/* ANIMACIÓN HACIA LA DERECHA, MOVIENDO EL SVG DESDE -1440px HASTA 0 */
+@keyframes waveSlideRight {
   0% {
-    transform: translateX(0);
-  }
-  100% {
     transform: translateX(-1440px);
   }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-/* Responsive para cabecera */
+/* Responsive para cabecera y onda */
 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    height: auto;
-    gap: 20px;
+  .wave-container {
+    height: 60px;
   }
-  
-  nav ul {
-    justify-content: center;
-    gap: 16px;
+  .wave {
+    height: 60px;
   }
 }
 
@@ -117,7 +114,7 @@ nav a img.icon {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 20px;
-  width: 90vw;          /* Cambiado a 90% del viewport */
+  width: 90vw;
   margin: 20px auto;
   min-height: calc(300px * 3 + 20px * 2);
 }
@@ -134,7 +131,6 @@ nav a img.icon {
   border-radius: 8px;
   transition: 0.3s;
 }
-
 
 .project:hover {
   background-color: #FF5860;
